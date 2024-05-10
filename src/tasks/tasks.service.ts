@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common'
 import { type Task, TaskStatus } from './task.entity'
 import { v4 as uuid } from 'uuid'
 
-@Injectable()
+@Injectable() // indiica que vamos a poder injectar código en otros componentes
 export class TasksService {
-  private tasks: Task[] = [{
+  private readonly tasks: Task[] = [{
     id: '1',
     title: 'Task 1',
     description: 'Task 1 description',
@@ -26,6 +26,6 @@ export class TasksService {
     return task
   }
 
-  updateTask () {}
-  deleteTask () {}
+  // updateTask () {}
+  // deleteTask () {}
 }
